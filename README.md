@@ -169,6 +169,14 @@ It comes with Redis. It runs on default port `6379`.
 
 ## GULP
 
+In .env file add the follow variable:
+
+# Especial
+
+In the .env file add the follow var:
+
+ESPECIAL=path_website_or_project
+
 If you work GULP with SASS please modify the docker-compose.yml volume paths:
 
 ```shell
