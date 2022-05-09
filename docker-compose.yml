@@ -61,3 +61,14 @@ services:
     image: redis:latest
     ports:
       - "127.0.0.1:${HOST_MACHINE_REDIS_PORT}:6379"
+  gulp:
+    build:
+      context: "./gulp"
+      dockerfile: Dockerfile
+      args:
+        ESPECIAL: "${ESPECIAL}"
+    command: gulp
+    volumes:
+      - './gulp/gulpfile.js:/var/www/html/${ESPECIAL}/gulpfile.js'
+      - './www/${ESPECIAL}/assets/sass:/var/www/html/${ESPECIAL}/assets/sass'
+      - './www/${ESPECIAL}/assets/css:/var/www/html/${ESPECIAL}/assets/css'
