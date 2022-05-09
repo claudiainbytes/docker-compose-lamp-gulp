@@ -167,6 +167,22 @@ password: tiger
 
 It comes with Redis. It runs on default port `6379`.
 
+## GULP
+
+If you work GULP with SASS please modify the docker-compose.yml volume paths:
+
+```shell
+      - './gulp/gulpfile.js:/var/www/html/${ESPECIAL}/gulpfile.js'
+      - './www/${ESPECIAL}/assets/sass:/var/www/html/${ESPECIAL}/assets/sass'
+      - './www/${ESPECIAL}/assets/css:/var/www/html/${ESPECIAL}/assets/css'
+```
+
+Running GULP 
+
+```shell
+docker-compose run gulp
+```
+
 ## Contributing
 We are happy if you want to create a pull request or help people with their issues. If you want to create a PR, please remember that this stack is not built for production usage, and changes should good for general purpose and not overspecialized. 
 > Please note that we simplified the project structure from several branches for each php version, to one centralized master branch.  Please create your PR against master branch. 
