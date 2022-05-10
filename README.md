@@ -188,7 +188,7 @@ If you work GULP with SASS please modify the docker-compose.yml volume paths:
 Running GULP 
 
 ```shell
-docker-compose run gulp
+docker-compose up gulp
 ```
 
 ## Contributing
